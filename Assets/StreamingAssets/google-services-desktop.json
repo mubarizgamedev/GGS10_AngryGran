@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "324723844201",
+    "project_id": "ggs10-angry-gran-cat",
+    "storage_bucket": "ggs10-angry-gran-cat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324723844201:android:80b0686c41f9e71df52ef8",
+        "android_client_info": {
+          "package_name": "com.ggs.angry.gran.cat.simulator.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgdRXeMYSHqof0PA84qo9Jt1eeiUM6-_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

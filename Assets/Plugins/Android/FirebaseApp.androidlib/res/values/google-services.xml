@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
+  <string name="gcm_defaultSenderId" translatable="false">324723844201</string>
+  <string name="google_storage_bucket" translatable="false">ggs10-angry-gran-cat.firebasestorage.app</string>
+  <string name="project_id" translatable="false">ggs10-angry-gran-cat</string>
+  <string name="google_api_key" translatable="false">AIzaSyCgdRXeMYSHqof0PA84qo9Jt1eeiUM6-_4</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCgdRXeMYSHqof0PA84qo9Jt1eeiUM6-_4</string>
+  <string name="google_app_id" translatable="false">1:324723844201:android:80b0686c41f9e71df52ef8</string>
+</resources>
