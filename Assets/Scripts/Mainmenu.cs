@@ -3,10 +3,16 @@ using UnityEngine.UI;
 
 public class Mainmenu : MonoBehaviour
 {
+
+    [Space(5)]
+    [Header("SKIP APPOPEN GAME")]
+    public bool yes;
+
     [Header("LINKS")]
     public string privacyPolicyLink;
     public string moreGamesLink;
     public string rateUsLink;
+
 
     [Space(5)]
     [Header("BUTTONS")]
@@ -38,5 +44,13 @@ public class Mainmenu : MonoBehaviour
     void OpenLink(string link)
     {
         Application.OpenURL(link);
+    }
+
+    private void OnEnable()
+    {
+        if (AdmobAdsManager.Instance)
+        {
+            AdmobAdsManager.Instance.Skip_Appopen = yes;
+        }
     }
 }

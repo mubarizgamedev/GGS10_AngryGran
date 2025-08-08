@@ -4868,63 +4868,6 @@ MonoBehaviour:
   OnDisableEvents:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &202960366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 202960367}
-  - component: {fileID: 202960368}
-  m_Layer: 5
-  m_Name: Code
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &202960367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202960366}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.013683488, y: -0, z: -0, w: 0.9999064}
-  m_LocalPosition: {x: 0.7241478, y: -2.9964414, z: 122.992546}
-  m_LocalScale: {x: 0.10691672, y: 0.10691675, z: 0.10691675}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1329262350}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &202960368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202960366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0706328e1e5df844cab656759c91d141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  privacyPolicyLink: https://gigagamesstudio.blogspot.com/2025/04/privacy-policy-giga-games-studio.html
-  moreGamesLink: https://play.google.com/store/apps/developer?id=Giga+Games+Studio
-  rateUsLink: https://play.google.com/store/apps/details?id=com.ggs.angry.gran.cat.simulator.game
-  btnPrivacyPolicy: {fileID: 2089019365}
-  btnMoreGames: {fileID: 1107729237}
-  btnRateUs: {fileID: 168747432}
-  btnSettingBack: {fileID: 1393188909}
-  btnQuitYes: {fileID: 368754163}
-  btnQuitNo: {fileID: 2142372024}
-  mainmenuPanel: {fileID: 622142701}
-  petSelectionMenu: {fileID: 43949870}
-  settingPanel: {fileID: 409864610}
-  quitPanel: {fileID: 460753795}
 --- !u!1 &212512918
 GameObject:
   m_ObjectHideFlags: 0
@@ -21546,7 +21489,6 @@ Transform:
   m_Children:
   - {fileID: 88860522}
   - {fileID: 1948585300}
-  - {fileID: 202960367}
   - {fileID: 158154773}
   - {fileID: 421121560}
   - {fileID: 288491177349449994}
@@ -31957,6 +31899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0706328e1e5df844cab656759c91d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yes: 1
   privacyPolicyLink: https://gigagamesstudio.blogspot.com/2025/04/privacy-policy-giga-games-studio.html
   moreGamesLink: https://play.google.com/store/apps/developer?id=Giga+Games+Studio
   rateUsLink: https://play.google.com/store/apps/details?id=com.ggs.angry.gran.cat.simulator.game
