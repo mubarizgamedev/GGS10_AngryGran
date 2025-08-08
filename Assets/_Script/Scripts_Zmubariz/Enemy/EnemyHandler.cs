@@ -47,6 +47,7 @@ public class EnemyHandler : MonoBehaviour
     public UnityEvent OnGrannyHitCat;
     public UnityEvent OnAttackStart;
     public static event Action OnGrannyNear;
+    public static event Action GrannyAboutToAttack;
 
     private Animator m_Animator;
     public NavMeshAgent m_Agent;
@@ -224,6 +225,7 @@ public class EnemyHandler : MonoBehaviour
         if (distanceToCat <= stopDistanceBeforeCat)
         {
             canAttackCat = true;
+            GrannyAboutToAttack?.Invoke();
             AttackCat();
         }
         else if (chaseTimer >= maxTimeGrannyChaseCat)
@@ -269,7 +271,10 @@ public class EnemyHandler : MonoBehaviour
     IEnumerator FailCoroutine()
     {
         yield return new WaitForSeconds(4f);
+
         GameStateManager.Instance.MissionFailed();
+
+        Debug.Log("Mission Failed is fired");
     }
 
     private bool IsCatInDetectionRadius()

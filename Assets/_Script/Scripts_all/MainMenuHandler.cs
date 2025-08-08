@@ -23,11 +23,16 @@ public class MainMenuHandler : MonoBehaviour
 
     void OnSettingPressed()
     {
-        Interstitial.Instance.StartLoading(() =>
-        {
-            settingPanel.SetActive(true);
-            mainmenuPanel.SetActive(false);
-        });
+        //Ad
+        //Interstitial.Instance.StartLoading(() =>
+        //{
+        //    settingPanel.SetActive(true);
+        //    mainmenuPanel.SetActive(false);
+        //});
+
+        //NOAd
+        settingPanel.SetActive(true);
+        mainmenuPanel.SetActive(false);
     }
 
     void OnExitButtonClicked()
