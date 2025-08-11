@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class SpecialManager : MonoBehaviour
 {
+    public AdAfter40Sec adAfter40Sec;
+    public SpecialAttack_PopUp specialAttack_Pop;
     [Header("Boxing")]
     [SerializeField] GameObject fireRewardPanel;
     [SerializeField] GameObject beeRewardPanel;
@@ -73,21 +75,41 @@ public class SpecialManager : MonoBehaviour
 
     void RewardForBee()
     {
+        if(adAfter40Sec != null && specialAttack_Pop!= null)
+        {
+            adAfter40Sec.ResetAdTimer();
+            specialAttack_Pop.ResetSpeacialTimer();
+        }
         Rewad_.Instance.StartLoading(ActionAfterBeeReward);
     }
 
     void RewardForFire()
     {
+        if (adAfter40Sec != null && specialAttack_Pop != null)
+        {
+            adAfter40Sec.ResetAdTimer();
+            specialAttack_Pop.ResetSpeacialTimer();
+        }
         Rewad_.Instance.StartLoading(ActionAfterFireReward);
     }
 
     void RewardForPunch()
     {
+        if (adAfter40Sec != null && specialAttack_Pop != null)
+        {
+            adAfter40Sec.ResetAdTimer();
+            specialAttack_Pop.ResetSpeacialTimer();
+        }
         Rewad_.Instance.StartLoading(ActionAfterBoxingReward);
     }
 
     void RewardForCurrent()
     {
+        if (adAfter40Sec != null && specialAttack_Pop != null)
+        {
+            adAfter40Sec.ResetAdTimer();
+            specialAttack_Pop.ResetSpeacialTimer();
+        }
         Rewad_.Instance.StartLoading(ActionAfterShockReward);
     }
 

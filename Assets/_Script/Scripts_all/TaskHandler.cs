@@ -86,6 +86,7 @@ public class TaskHandler : MonoBehaviour
 
     public void OnTaskCompleted(TaskUI taskUI)
     {
+       
         int index = activeTaskUIs.IndexOf(taskUI);
 
         if (index >= 0)
@@ -97,6 +98,11 @@ public class TaskHandler : MonoBehaviour
             Destroy(taskUI.gameObject);
             activeTaskUIs.RemoveAt(index);
             activeTaskIndexes.RemoveAt(index);
+
+            if (AdmobAdsManager.Instance.Check_Firebase && Application.internetReachability != NetworkReachability.NotReachable)
+            {
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Level_" + index+"Comp");
+            }
 
             GameStateManager.Instance.MissionCompleted();
             PlayerPrefs.SetInt("FirstTaskDone", 1); // Ensure this is set when a task is completed

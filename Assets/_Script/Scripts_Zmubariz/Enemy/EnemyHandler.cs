@@ -286,6 +286,10 @@ public class EnemyHandler : MonoBehaviour
 
     public void ResetState()
     {
+        foreach (var item in grannyBats)
+        {
+            item?.SetActive(false);
+        }
         dangerMusicWhenChasingCat.SetActive(false);
         mainMusicGameObject.SetActive(true);
         chaseTimer = maxTimeGrannyChaseCat;

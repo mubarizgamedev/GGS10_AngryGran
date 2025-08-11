@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class TaskOpenClose : MonoBehaviour
 {
+    public float waitToUpAgain = 3f; // Time to wait before bringing the task panel back up
     public Button taskUpDown;
     public Animator taskAnimator;
     public Sprite upSprite;
@@ -16,11 +17,11 @@ public class TaskOpenClose : MonoBehaviour
     private void Start()
     {
         taskUpDown.onClick.AddListener(ToggleTaskPanel);
-        TouchCheck.OnTouch += UpTask;
+        
     }
     private void OnDestroy()
     {
-        TouchCheck.OnTouch -= UpTask;
+       
     }
 
     
@@ -39,44 +40,44 @@ public class TaskOpenClose : MonoBehaviour
             taskUpDownImage.sprite = upSprite;
             taskUpDownImage.enabled = true;
             isTaskUp = false;
+
+            StopAllCoroutines();
+            StartCoroutine(AutoBringUpAfterDelay(waitToUpAgain));
         }
     }
 
     void ToggleTaskPanel()
     {
-        if(isTaskUp)
+        if (isTaskUp)
         {
+            // Bring down
             taskAnimator.SetTrigger("TaskDown");
             taskUpDownImage.sprite = upSprite;
             isTaskUp = false;
+
+            // Start auto up after 2 seconds
+            StopAllCoroutines();
+            StartCoroutine(AutoBringUpAfterDelay(waitToUpAgain));
         }
         else
         {
+            // Bring up
             taskAnimator.SetTrigger("TaskUp");
             taskUpDownImage.sprite = downSprite;
             isTaskUp = true;
         }
     }
 
-    void UpTask()
+    IEnumerator AutoBringUpAfterDelay(float delay)
     {
-        Invoke(nameof(Work), restTime);
-    }
-    void Work()
-    {
-        StartCoroutine(NowUpCoroutine());
-    }
+        yield return new WaitForSeconds(delay);
 
-    IEnumerator NowUpCoroutine()
-    {
-        yield return new WaitForSeconds(5f);
+        // Only bring up if it's still down
         if (!isTaskUp)
         {
-            taskAnimator.SetTrigger("TaskUp");
-            taskUpDownImage.sprite = downSprite;
-            isTaskUp = true;
-            Debug.Log("Now task Up");
+            ToggleTaskPanel();
         }
     }
+
 
 }
