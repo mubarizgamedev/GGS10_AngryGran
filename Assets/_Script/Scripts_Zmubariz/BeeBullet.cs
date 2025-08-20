@@ -7,7 +7,7 @@ public class BeeBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("BeeBullet Triggered with: " + other.gameObject.name);
+        Debug.Log("Bee Bullet Triggered with: " + other.gameObject.name);
 
         if (other.gameObject.CompareTag("Enemy"))
         {

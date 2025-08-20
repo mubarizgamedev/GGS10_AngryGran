@@ -44,7 +44,6 @@ public class EnemyHandler : MonoBehaviour
     [SerializeField] string cameraAnimShakeTrigger = "Shake";
 
     [Header("Events")]
-    public UnityEvent OnGrannyHitCat;
     public UnityEvent OnAttackStart;
     public static event Action OnGrannyNear;
     public static event Action GrannyAboutToAttack;
@@ -324,7 +323,6 @@ public class EnemyHandler : MonoBehaviour
 
     public void GrannyAttacked()
     {
-        OnGrannyHitCat?.Invoke();
         SFX_Manager.PlaySound(SFX_Manager.Instance.catCrySound);
         SFX_Manager.PlaySound(SFX_Manager.Instance.catHitSound);
         SFX_Manager.PlayRandomSound(SFX_Manager.Instance.OnDieSounds, 0.5f);

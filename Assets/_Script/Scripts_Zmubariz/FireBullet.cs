@@ -7,7 +7,7 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("BeeBullet Triggered with: " + other.gameObject.name);
+        Debug.Log("Fire Bullet Triggered with: " + other.gameObject.name);
 
         if (other.gameObject.CompareTag("Enemy"))
         {
